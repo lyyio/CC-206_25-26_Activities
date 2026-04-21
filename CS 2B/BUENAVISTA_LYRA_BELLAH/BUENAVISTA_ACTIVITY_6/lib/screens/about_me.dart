@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme/colors.dart';
+import '../theme/styles.dart';
 import '../widgets/app_drawer.dart';
 
 class AboutMeScreen extends StatelessWidget {
@@ -23,7 +23,7 @@ class AboutMeScreen extends StatelessWidget {
 
         title: const Text(
           'About Me',
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700, fontSize: 20, fontFamily: 'Poppins', ),
         ), 
       ),
 
@@ -85,14 +85,30 @@ class _ProfileSection extends StatelessWidget {
               Text(
                 'Lyra Bellah A. Buenavista',
                 style: TextStyle(
-                    fontSize: 17, fontWeight: FontWeight.bold, color: AppColors.textDark),
+                  fontSize: 15,
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.textDark,
+                  fontFamily: 'Poppins',
+                )
               ),
               Divider(color: AppColors.divider, height: 20, thickness: 1),
-              Text('West Visayas State University',
-                  style: TextStyle(color: AppColors.textGrey, fontSize: 13)),
+              Text(
+                'West Visayas State University',
+                style: TextStyle(
+                  color: AppColors.textGrey, 
+                  fontSize: 12,
+                  fontFamily: 'Poppins',
+                )
+              ),
               SizedBox(height: 4),
-              Text('Computer Science',
-                  style: TextStyle(color: AppColors.textGrey, fontSize: 13)),
+              Text(
+                'Computer Science',
+                style: TextStyle(
+                  color: AppColors.textGrey, 
+                  fontSize: 12,
+                  fontFamily: 'Poppins',
+                )
+              ),
             ],
           ),
         ),
@@ -137,7 +153,11 @@ class _InnerCard extends StatelessWidget {
           const Text(
             'Biography',
             style: TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 17, color: AppColors.navBg),
+              fontWeight: FontWeight.w700, 
+              fontSize: 16, 
+              fontFamily: 'Poppins',
+              color: AppColors.navBg
+            ),
           ),
 
           const SizedBox(height: 12),
@@ -147,7 +167,7 @@ class _InnerCard extends StatelessWidget {
             "process of creating through code. Outside of classes, I'm usually "
             "reading, watching films, or listening to TXT. I appreciate clean "
             "systems and am dedicated to building efficient software. ",
-            style: TextStyle(color: AppColors.textGrey, fontSize: 13, height: 1.6),
+            style: TextStyle(color: AppColors.textGrey, fontSize: 12, fontFamily: 'Poppins', height: 1.6),
           ),
 
           const SizedBox(height: 8),
@@ -173,26 +193,28 @@ class _InfoRow extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.rowBg,
         borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: AppColors.cardBorder, width: 1.01),
       ),
       
       child: Row(
         children: [
-          Icon(icon, size: 28, color: AppColors.textDark),
+          Icon(icon, size: 24, color: AppColors.textDark),
           const SizedBox(width: 14),
-          Column(
+          Expanded(child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(label,
                 style: const TextStyle(
-                fontWeight: FontWeight.bold, fontSize: 14, color: AppColors.textDark)
+                fontWeight: FontWeight.bold, fontSize: 13, color: AppColors.textDark)
               ),
               const SizedBox(height: 2),
               Text(value,
                 style: const TextStyle(
-                color: AppColors.textGrey, fontSize: 13)
+                color: AppColors.textGrey, fontSize: 11)
               ),
             ],
-          ),
+          ), 
+          )
         ],
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme/colors.dart';
+import '../theme/styles.dart';
 import '../screens/about_me.dart';
 import '../screens/home_screen.dart';
 
@@ -28,9 +28,12 @@ class AppDrawer extends StatelessWidget {
             decoration: const BoxDecoration(color: AppColors.navBg),
             accountName: const Text(
               'Lyra Bellah A. Buenavista',
-              style: TextStyle(fontWeight: FontWeight.bold),
+              style: TextStyle(fontWeight: FontWeight.w700, fontFamily: 'Poppins'),
             ),
-            accountEmail: const Text('West Visayas State University'),
+            accountEmail: const Text(
+              'West Visayas State University', 
+              style: TextStyle(fontFamily: 'Poppins'), 
+            ),
             currentAccountPicture: const CircleAvatar(
               backgroundImage: AssetImage('assets/images/notion.png'),
             ),
@@ -49,8 +52,9 @@ class AppDrawer extends StatelessWidget {
       title: Text(
         label,
         style: TextStyle(
+          fontFamily: 'Poppins',
           color: isActive ? AppColors.navBg : Colors.black87,
-          fontWeight: isActive ? FontWeight.bold : FontWeight.normal,
+          fontWeight: isActive ? FontWeight.w700 : FontWeight.w400,
         ),
       ),
       tileColor: isActive ? AppColors.rowBg : null,

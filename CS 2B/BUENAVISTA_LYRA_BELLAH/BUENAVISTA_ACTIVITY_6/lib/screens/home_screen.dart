@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
-import '../theme/colors.dart';
+import '../theme/styles.dart';
 import '../widgets/app_drawer.dart';
 
 
@@ -33,8 +33,9 @@ class HomeScreen extends StatelessWidget {
           'Home',
           style: TextStyle(
             color: Colors.white,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w700,
             fontSize: 20,
+            fontFamily: 'Poppins',
           ),
         ),
       ),
@@ -68,7 +69,7 @@ class HomeScreen extends StatelessWidget {
                 icon: const Icon(Icons.volume_up),
                 label: const Text(
                   'Play MEOW Sound',
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, fontFamily: 'Poppins'),
                 ),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: AppColors.navBg,
